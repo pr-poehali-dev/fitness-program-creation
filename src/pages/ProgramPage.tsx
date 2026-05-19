@@ -155,13 +155,6 @@ export default function ProgramPage() {
           style={{ background: program.color }}
         />
         <div className="container mx-auto max-w-4xl">
-          <div
-            className="inline-flex items-center gap-2 text-xs font-bold tracking-widest mb-6 px-3 py-1 border"
-            style={{ borderColor: program.color, color: program.color, fontFamily: "Oswald, sans-serif" }}
-          >
-            <Icon name={program.icon} size={13} />
-            ПРОГРАММА ТРЕНИРОВОК
-          </div>
           <h1
             className="text-6xl md:text-8xl font-black leading-none mb-4"
             style={{ fontFamily: "Oswald, sans-serif", color: program.color }}
