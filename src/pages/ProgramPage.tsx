@@ -142,7 +142,7 @@ export default function ProgramPage() {
         >
           POWER<span style={{ color: "#f2f2f2" }}>ZONE</span>
         </div>
-        <button className="neon-btn px-5 py-2 text-sm">Записаться</button>
+        <div />
       </nav>
 
       {/* HERO */}
@@ -251,15 +251,7 @@ export default function ProgramPage() {
             className="p-6 rounded"
             style={{ background: "#141414", border: "1px solid rgba(255,106,0,0.15)" }}
           >
-            <div
-              className="text-3xl font-black mb-1"
-              style={{ fontFamily: "Oswald, sans-serif", color: program.color }}
-            >
-              {program.price}
-            </div>
-            <div className="text-xs text-gray-500 mb-6 tracking-wider">СТОИМОСТЬ</div>
-
-            <div className="flex flex-col gap-3 mb-6 text-sm text-gray-400">
+            <div className="flex flex-col gap-3 text-sm text-gray-400">
               <div className="flex items-start gap-2">
                 <Icon name="CalendarDays" size={14} style={{ color: program.color, marginTop: 2 }} />
                 <span>{program.schedule}</span>
@@ -273,10 +265,6 @@ export default function ProgramPage() {
                 <span>Тренер: {program.trainer}</span>
               </div>
             </div>
-
-            <button className="neon-btn w-full py-3 text-sm">
-              Записаться на занятие
-            </button>
           </div>
 
           <button
