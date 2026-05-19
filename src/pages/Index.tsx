@@ -107,8 +107,8 @@ const TICKER_ITEMS = [
 const STATS = [
   { value: "12+", label: "Лет опыта" },
   { value: "3 000+", label: "Участников" },
-  { value: "40+", label: "Тренеров" },
-  { value: "98%", label: "Довольных клиентов" },
+  { value: "6", label: "Направлений" },
+  { value: "98%", label: "Довольных участников" },
 ];
 
 export default function Index() {
@@ -149,7 +149,6 @@ export default function Index() {
               {item.label}
             </button>
           ))}
-          <button className="neon-btn px-5 py-2 text-sm">Записаться</button>
         </div>
 
         <button
@@ -181,7 +180,6 @@ export default function Index() {
               {item.label}
             </button>
           ))}
-          <button className="neon-btn px-8 py-3 text-lg mt-4">Записаться</button>
         </div>
       )}
 
@@ -215,7 +213,7 @@ export default function Index() {
               className="text-lg md:text-xl text-gray-300 mb-8 max-w-xl fade-in-up fade-in-up-delay-2"
               style={{ fontFamily: "Golos Text, sans-serif", lineHeight: 1.6 }}
             >
-              Профессиональные тренировки, лучшие тренеры города и атмосфера, которая заряжает. Начни путь к результату сегодня.
+              Спортивные тренировки, дружная атмосфера и реальные результаты. Выбирай направление и начинай уже сегодня.
             </p>
             <div className="flex flex-wrap gap-4 fade-in-up fade-in-up-delay-3">
               <button className="neon-btn px-8 py-4 text-base" onClick={() => scrollTo("programs")}>
@@ -405,14 +403,7 @@ export default function Index() {
             </table>
           </div>
 
-          <div className="mt-10 flex flex-col sm:flex-row gap-4 items-start sm:items-center">
-            <button className="neon-btn px-8 py-4">
-              Записаться на занятие
-            </button>
-            <p className="text-sm" style={{ color: "#666" }}>
-              Бесплатное пробное занятие для новых клиентов
-            </p>
-          </div>
+
         </div>
       </section>
 
@@ -483,42 +474,7 @@ export default function Index() {
         </div>
       </section>
 
-      {/* CTA BANNER */}
-      <section
-        className="py-20 relative overflow-hidden"
-        style={{ background: "#ff6a00" }}
-      >
-        <div className="container mx-auto px-6 md:px-12 text-center relative z-10">
-          <h2
-            className="text-5xl md:text-7xl font-black mb-6"
-            style={{ fontFamily: "Oswald, sans-serif", color: "#0d0d0d" }}
-          >
-            НАЧНИ СЕГОДНЯ
-          </h2>
-          <p className="text-lg mb-8 font-semibold" style={{ color: "rgba(13,13,13,0.7)" }}>
-            Первое занятие — бесплатно. Без обязательств.
-          </p>
-          <button
-            className="px-10 py-4 text-base font-black tracking-widest border-2 transition-all"
-            style={{
-              fontFamily: "Oswald, sans-serif",
-              background: "#0d0d0d",
-              color: "#ff6a00",
-              border: "2px solid #0d0d0d",
-            }}
-            onMouseEnter={(e) => {
-              (e.currentTarget as HTMLElement).style.background = "transparent";
-              (e.currentTarget as HTMLElement).style.color = "#0d0d0d";
-            }}
-            onMouseLeave={(e) => {
-              (e.currentTarget as HTMLElement).style.background = "#0d0d0d";
-              (e.currentTarget as HTMLElement).style.color = "#ff6a00";
-            }}
-          >
-            ЗАПИСАТЬСЯ НА ПРОБНОЕ
-          </button>
-        </div>
-      </section>
+
 
       {/* FOOTER */}
       <footer
@@ -532,29 +488,8 @@ export default function Index() {
           >
             POWER<span style={{ color: "#f2f2f2" }}>ZONE</span>
           </div>
-          <div className="flex gap-6 text-xs tracking-widest" style={{ color: "#666" }}>
-            <span>г. Москва, ул. Спортивная, 1</span>
-            <span>|</span>
-            <span>+7 (999) 000-00-00</span>
-          </div>
-          <div className="flex gap-3">
-            {["Instagram", "Youtube", "Send"].map((ic) => (
-              <button
-                key={ic}
-                className="w-9 h-9 flex items-center justify-center rounded border transition-all"
-                style={{ borderColor: "rgba(255,106,0,0.2)", color: "#666" }}
-                onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLElement).style.color = "#ff6a00";
-                  (e.currentTarget as HTMLElement).style.borderColor = "#ff6a00";
-                }}
-                onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLElement).style.color = "#666";
-                  (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,106,0,0.2)";
-                }}
-              >
-                <Icon name={ic} size={15} />
-              </button>
-            ))}
+          <div className="text-xs tracking-widest" style={{ color: "#444" }}>
+            © 2024 POWERZONE
           </div>
         </div>
       </footer>
