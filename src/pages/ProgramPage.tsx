@@ -175,7 +175,6 @@ export default function ProgramPage() {
             {[
               { icon: "Clock", label: program.duration },
               { icon: "BarChart2", label: program.level },
-              { icon: "User", label: program.trainer },
             ].map((item) => (
               <div key={item.label} className="flex items-center gap-2 text-sm" style={{ color: "#aaa" }}>
                 <Icon name={item.icon} size={15} style={{ color: program.color }} />
@@ -259,10 +258,6 @@ export default function ProgramPage() {
               <div className="flex items-start gap-2">
                 <Icon name="Clock" size={14} style={{ color: program.color, marginTop: 2 }} />
                 <span>{program.duration} / занятие</span>
-              </div>
-              <div className="flex items-start gap-2">
-                <Icon name="User" size={14} style={{ color: program.color, marginTop: 2 }} />
-                <span>Тренер: {program.trainer}</span>
               </div>
             </div>
           </div>
