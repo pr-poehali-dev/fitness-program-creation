@@ -256,26 +256,7 @@ export default function Index() {
         </div>
       </div>
 
-      {/* STATS */}
-      <section className="py-16 border-b" style={{ borderColor: "rgba(255,106,0,0.1)" }}>
-        <div className="container mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {STATS.map((stat) => (
-              <div key={stat.label} className="text-center">
-                <div
-                  className="text-4xl md:text-5xl font-black mb-2"
-                  style={{ fontFamily: "Oswald, sans-serif", color: "#ff6a00" }}
-                >
-                  {stat.value}
-                </div>
-                <div className="text-sm tracking-widest uppercase" style={{ color: "#888" }}>
-                  {stat.label}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* PROGRAMS */}
       <section id="programs" className="py-24">
