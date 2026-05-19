@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Icon from "@/components/ui/icon";
 
 const HERO_IMG = "https://cdn.poehali.dev/projects/8e5acb19-25bd-40ec-a2e2-d254fc542629/files/f14d8ab6-2ed6-4c6b-a759-d48db07f6ecd.jpg";
@@ -23,6 +24,7 @@ const GALLERY_IMGS = [
 
 const PROGRAMS = [
   {
+    id: "hiit",
     icon: "Zap",
     title: "HIIT",
     subtitle: "Высокоинтенсивный интервальный тренинг",
@@ -32,6 +34,7 @@ const PROGRAMS = [
     color: "#ff6a00",
   },
   {
+    id: "silovaya",
     icon: "Dumbbell",
     title: "Силовая",
     subtitle: "Работа с весами и тренажёрами",
@@ -41,6 +44,7 @@ const PROGRAMS = [
     color: "#ff4444",
   },
   {
+    id: "kardio",
     icon: "Heart",
     title: "Кардио",
     subtitle: "Выносливость и жиросжигание",
@@ -50,6 +54,7 @@ const PROGRAMS = [
     color: "#ff9900",
   },
   {
+    id: "crossfit",
     icon: "Flame",
     title: "CrossFit",
     subtitle: "Функциональный тренинг",
@@ -59,6 +64,7 @@ const PROGRAMS = [
     color: "#ff6a00",
   },
   {
+    id: "yoga",
     icon: "Wind",
     title: "Йога",
     subtitle: "Гибкость, баланс и восстановление",
@@ -68,6 +74,7 @@ const PROGRAMS = [
     color: "#44aaff",
   },
   {
+    id: "boks",
     icon: "Trophy",
     title: "Бокс",
     subtitle: "Боевая техника и выносливость",
@@ -106,6 +113,7 @@ const STATS = [
 
 export default function Index() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -281,7 +289,8 @@ export default function Index() {
             {PROGRAMS.map((prog) => (
               <div
                 key={prog.title}
-                className="program-card glass-card p-6 relative overflow-hidden"
+                className="program-card glass-card p-6 relative overflow-hidden cursor-pointer"
+                onClick={() => navigate(`/program/${prog.id}`)}
               >
                 <div
                   className="absolute top-0 right-0 w-24 h-24 rounded-bl-full opacity-10"
