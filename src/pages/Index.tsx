@@ -85,15 +85,7 @@ const PROGRAMS = [
   },
 ];
 
-const SCHEDULE = [
-  { time: "07:00", program: "Кардио", day: "Пн / Ср / Пт", spots: 8 },
-  { time: "09:00", program: "Йога", day: "Вт / Чт / Сб", spots: 12 },
-  { time: "11:00", program: "Силовая", day: "Пн / Ср / Пт", spots: 6 },
-  { time: "13:00", program: "HIIT", day: "Вт / Чт", spots: 10 },
-  { time: "16:00", program: "CrossFit", day: "Пн – Пт", spots: 15 },
-  { time: "18:30", program: "Бокс", day: "Вт / Чт / Сб", spots: 8 },
-  { time: "20:00", program: "HIIT", day: "Пн / Ср / Пт", spots: 12 },
-];
+
 
 const TICKER_ITEMS = [
   "ТРЕНИРУЙСЯ КАЖДЫЙ ДЕНЬ",
@@ -138,7 +130,6 @@ export default function Index() {
           {[
             { label: "Главная", id: "hero" },
             { label: "Программы", id: "programs" },
-            { label: "Расписание", id: "schedule" },
             { label: "Галерея", id: "gallery" },
           ].map((item) => (
             <button
@@ -168,7 +159,6 @@ export default function Index() {
           {[
             { label: "Главная", id: "hero" },
             { label: "Программы", id: "programs" },
-            { label: "Расписание", id: "schedule" },
             { label: "Галерея", id: "gallery" },
           ].map((item) => (
             <button
@@ -328,84 +318,7 @@ export default function Index() {
         </div>
       </section>
 
-      {/* SCHEDULE */}
-      <section
-        id="schedule"
-        className="py-24"
-        style={{ background: "#111" }}
-      >
-        <div className="container mx-auto px-6 md:px-12">
-          <div className="mb-14">
-            <div
-              className="text-xs font-bold tracking-widest mb-3"
-              style={{ color: "#ff6a00", fontFamily: "Oswald, sans-serif" }}
-            >
-              КОГДА ПРИХОДИТЬ
-            </div>
-            <h2
-              className="text-5xl md:text-6xl font-black"
-              style={{ fontFamily: "Oswald, sans-serif" }}
-            >
-              РАСПИСАНИЕ<br />
-              <span style={{ color: "#ff6a00" }}>ЗАНЯТИЙ</span>
-            </h2>
-          </div>
 
-          <div className="overflow-x-auto">
-            <table className="w-full min-w-[600px]">
-              <thead>
-                <tr
-                  className="text-xs tracking-widest uppercase border-b"
-                  style={{ color: "#666", borderColor: "rgba(255,106,0,0.2)", fontFamily: "Oswald, sans-serif" }}
-                >
-                  <th className="text-left pb-4 pr-6">Время</th>
-                  <th className="text-left pb-4 pr-6">Программа</th>
-
-                  <th className="text-left pb-4 pr-6">Дни</th>
-                  <th className="text-left pb-4">Мест</th>
-                </tr>
-              </thead>
-              <tbody>
-                {SCHEDULE.map((row, i) => (
-                  <tr
-                    key={i}
-                    className="schedule-row border-b"
-                    style={{ borderColor: "rgba(255,255,255,0.05)" }}
-                  >
-                    <td
-                      className="py-4 pr-6 font-black text-lg"
-                      style={{ fontFamily: "Oswald, sans-serif", color: "#ff6a00" }}
-                    >
-                      {row.time}
-                    </td>
-                    <td className="py-4 pr-6 font-semibold" style={{ color: "#f2f2f2" }}>
-                      {row.program}
-                    </td>
-
-                    <td className="py-4 pr-6 text-sm" style={{ color: "#aaa" }}>
-                      {row.day}
-                    </td>
-                    <td className="py-4">
-                      <span
-                        className="text-xs font-bold px-2 py-1 rounded"
-                        style={{
-                          background: "rgba(255,106,0,0.12)",
-                          color: "#ff6a00",
-                          fontFamily: "Oswald, sans-serif",
-                        }}
-                      >
-                        {row.spots} мест
-                      </span>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-
-
-        </div>
-      </section>
 
       {/* GALLERY */}
       <section id="gallery" className="py-24">

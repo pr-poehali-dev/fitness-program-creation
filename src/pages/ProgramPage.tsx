@@ -233,10 +233,6 @@ export default function ProgramPage() {
           >
             <div className="flex flex-col gap-3 text-sm text-gray-400">
               <div className="flex items-start gap-2">
-                <Icon name="CalendarDays" size={14} style={{ color: program.color, marginTop: 2 }} />
-                <span>{program.schedule}</span>
-              </div>
-              <div className="flex items-start gap-2">
                 <Icon name="Clock" size={14} style={{ color: program.color, marginTop: 2 }} />
                 <span>{program.duration} / занятие</span>
               </div>
