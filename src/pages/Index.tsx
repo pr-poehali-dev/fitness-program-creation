@@ -210,7 +210,7 @@ export default function Index() {
               Профессиональные тренировки, лучшие тренеры города и атмосфера, которая заряжает. Начни путь к результату сегодня.
             </p>
             <div className="flex flex-wrap gap-4 fade-in-up fade-in-up-delay-3">
-              <button className="neon-btn px-8 py-4 text-base">
+              <button className="neon-btn px-8 py-4 text-base" onClick={() => scrollTo("programs")}>
                 Начать тренироваться
               </button>
               <button
