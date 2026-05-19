@@ -86,13 +86,13 @@ const PROGRAMS = [
 ];
 
 const SCHEDULE = [
-  { time: "07:00", program: "Кардио", trainer: "Анна М.", day: "Пн / Ср / Пт", spots: 8 },
-  { time: "09:00", program: "Йога", trainer: "Елена В.", day: "Вт / Чт / Сб", spots: 12 },
-  { time: "11:00", program: "Силовая", trainer: "Дмитрий К.", day: "Пн / Ср / Пт", spots: 6 },
-  { time: "13:00", program: "HIIT", trainer: "Максим Р.", day: "Вт / Чт", spots: 10 },
-  { time: "16:00", program: "CrossFit", trainer: "Иван С.", day: "Пн – Пт", spots: 15 },
-  { time: "18:30", program: "Бокс", trainer: "Алексей Н.", day: "Вт / Чт / Сб", spots: 8 },
-  { time: "20:00", program: "HIIT", trainer: "Максим Р.", day: "Пн / Ср / Пт", spots: 12 },
+  { time: "07:00", program: "Кардио", day: "Пн / Ср / Пт", spots: 8 },
+  { time: "09:00", program: "Йога", day: "Вт / Чт / Сб", spots: 12 },
+  { time: "11:00", program: "Силовая", day: "Пн / Ср / Пт", spots: 6 },
+  { time: "13:00", program: "HIIT", day: "Вт / Чт", spots: 10 },
+  { time: "16:00", program: "CrossFit", day: "Пн – Пт", spots: 15 },
+  { time: "18:30", program: "Бокс", day: "Вт / Чт / Сб", spots: 8 },
+  { time: "20:00", program: "HIIT", day: "Пн / Ср / Пт", spots: 12 },
 ];
 
 const TICKER_ITEMS = [
@@ -362,7 +362,7 @@ export default function Index() {
                 >
                   <th className="text-left pb-4 pr-6">Время</th>
                   <th className="text-left pb-4 pr-6">Программа</th>
-                  <th className="text-left pb-4 pr-6">Тренер</th>
+
                   <th className="text-left pb-4 pr-6">Дни</th>
                   <th className="text-left pb-4">Мест</th>
                 </tr>
@@ -383,9 +383,7 @@ export default function Index() {
                     <td className="py-4 pr-6 font-semibold" style={{ color: "#f2f2f2" }}>
                       {row.program}
                     </td>
-                    <td className="py-4 pr-6 text-sm" style={{ color: "#aaa" }}>
-                      {row.trainer}
-                    </td>
+
                     <td className="py-4 pr-6 text-sm" style={{ color: "#aaa" }}>
                       {row.day}
                     </td>
